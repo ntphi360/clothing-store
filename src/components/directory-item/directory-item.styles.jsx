@@ -20,6 +20,8 @@ export const Body = styled.div`
   opacity: 0.7;
   position: absolute;
 
+
+  
   h2 {
     font-weight: bold;
     margin: 0 6px 0;
@@ -35,8 +37,9 @@ export const Body = styled.div`
 `;
 
 export const DirectoryItemContainer = styled.div`
+  height:${({size}) => (size ? '380px' :'240px')};
   min-width: 30%;
-  height: 240px;
+  /* height: 240px; */
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -44,6 +47,11 @@ export const DirectoryItemContainer = styled.div`
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
+
+  @media screen and (max-width:800px){
+    height: 200px;
+  }
+
 
   &:first-child {
     margin-right: 7.5px;
